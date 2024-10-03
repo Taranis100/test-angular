@@ -1,0 +1,174 @@
+/* styles.css */
+
+/* Stile del body */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #c9d6ff, #e2e2e2); /* Gradiente di sfondo */
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenitore principale */
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 15px; /* Angoli più arrotondati */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Ombra più profonda */
+}
+
+/* Titolo della pagina */
+h1 {
+  text-align: center;
+  color: #4e54c8;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  text-transform: uppercase; /* Testo in maiuscolo */
+  letter-spacing: 2px; /* Spaziatura tra le lettere */
+}
+
+/* Bottone per tornare alla home */
+.return-home-btn {
+  display: block;
+  margin: 0 auto 30px auto;
+  padding: 15px 30px; /* Maggiore padding */
+  background: linear-gradient(45deg, #4e54c8, #8f94fb);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em; /* Dimensione del font aumentata */
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s; /* Aggiunta di transizioni */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombra iniziale */
+}
+
+.return-home-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Ombra al passaggio */
+  background: linear-gradient(45deg, #8f94fb, #4e54c8); /* Invertire i colori al passaggio */
+}
+
+/* Messaggio di benvenuto */
+.welcome-message {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  color: #555;
+  animation: fadeIn 1s ease-in-out; /* Animazione di ingresso */
+}
+
+/* Animazione di ingresso */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Contenitore del form */
+.form-container {
+  margin-bottom: 40px;
+}
+
+/* Sezione interattiva */
+.interactive-section {
+  background-color: #f9f9f9; /* Colore di sfondo più chiaro */
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Stili per il form */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.mat-form-field .mat-label {
+  font-weight: bold; /* Etichetta in grassetto */
+  color: #4e54c8; /* Colore etichetta */
+}
+
+/* Bottone di aggiunta utente */
+.add-user-btn {
+  background: linear-gradient(45deg, #4e54c8, #8f94fb);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.add-user-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenitore della tabella */
+.table-container {
+  margin-top: 40px;
+  overflow-x: auto;
+}
+
+/* Tabella utenti */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Intestazioni della tabella */
+.mat-header-cell {
+  background: linear-gradient(45deg, #4e54c8, #8f94fb);
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  text-align: left;
+  position: sticky; /* Fissa l'intestazione */
+  top: 0; /* Posiziona l'intestazione in cima */
+}
+
+/* Celle della tabella */
+.mat-cell {
+  padding: 15px;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease; /* Transizione dolce */
+}
+
+.mat-cell:hover {
+  background-color: #f2f2f2;
+}
+
+/* Contenitore dei bottoni di azione */
+.action-buttons {
+  display: flex;
+  gap: 15px; /* Spaziatura tra i bottoni */
+}
+
+/* Stili per i bottoni di azione */
+.edit-button, .delete-button {
+  background: linear-gradient(45deg, #4e54c8, #8f94fb);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+}
+
+.edit-button:hover, .delete-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.delete-button {
+  background-color: #f44336; /* Rosso per il bottone elimina */
+}
+
+.delete-button:hover {
+  background-color: #d32f2f; /* Colore più scuro al passaggio del mouse */
+}

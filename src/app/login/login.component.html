@@ -1,0 +1,36 @@
+<div class="login-container">
+  <mat-card class="login-card">
+    <mat-card-title>Welcome Back!</mat-card-title>
+
+    <p *ngIf="username" class="welcome-message">Welcome back, {{ username }}!</p> <!-- Messaggio di benvenuto dinamico -->
+
+    <mat-card-content>
+      <form #loginForm="ngForm" (ngSubmit)="login()">
+        <mat-form-field appearance="outline">
+          <mat-label>Username</mat-label>
+          <input matInput type="text" id="username" [(ngModel)]="username" name="username" required>
+          <mat-icon matSuffix>person</mat-icon> <!-- Icona spostata a destra -->
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" id="password" [(ngModel)]="password" name="password" required>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon> <!-- Bottone per mostrare/nascondere la password -->
+          </button>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="loading" class="login-button">
+          <span *ngIf="!loading">Login</span>
+          <mat-spinner *ngIf="loading" diameter="24"></mat-spinner>
+        </button>
+
+        <a class="forgot-password" routerLink="/reset-password">Forgot your password?</a> <!-- Link per password dimenticata -->
+
+        <div *ngIf="errorMessage" class="error-message">
+          <mat-icon color="warn">error</mat-icon> {{ errorMessage }}
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
